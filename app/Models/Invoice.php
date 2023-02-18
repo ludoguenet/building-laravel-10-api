@@ -20,6 +20,7 @@ final class Invoice extends Model
         'total_vat',
         'total_price_excluding_vat',
         'total_price',
+        'user_id',
     ];
 
     /**
@@ -31,6 +32,9 @@ final class Invoice extends Model
         'total_price' => 'decimal:2',
     ];
 
+    /**
+     * @return BelongsTo<User, Invoice>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

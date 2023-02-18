@@ -43,6 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * @return HasMany<Invoice>
+     */
     public function invoices(): HasMany
     {
         return $this->hasMany(Invoice::class);

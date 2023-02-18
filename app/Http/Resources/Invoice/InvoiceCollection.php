@@ -11,6 +11,10 @@ final class InvoiceCollection extends ResourceCollection
 {
     public $collects = InvoiceResource::class;
 
+    /**
+     * @param Request $request
+     * @return array<string, mixed>
+     */
     public function toArray(
         Request $request,
     ): array {
